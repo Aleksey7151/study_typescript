@@ -22,8 +22,7 @@ let increment: (baseValue: number, incrementation: number) => number = function(
 }
 
 function functionWithOptionalParameter(firstName: string, lastName?: string) : string {
-    if (lastName)
-    {
+    if (lastName) {
         return firstName + " " + lastName;
     }
 

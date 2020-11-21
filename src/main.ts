@@ -13,7 +13,6 @@ type Manager = {
 }
 
 type personAndManager = Person & Manager;
-
 let pam: personAndManager = {
     age: 77,
     name: 'Frodo',

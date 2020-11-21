@@ -4,6 +4,7 @@
       "module": "commonjs",
       "outDir": "out",
       "strictNullChecks": true,
+      "noImplicitThis": true,
       "sourceMap": true
     }
 }
