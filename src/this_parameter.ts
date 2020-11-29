@@ -47,7 +47,8 @@ class Handler {
         console.log("Bad handler called")
     }
 
-    // can use THIS inside an arrow function
+    // can use THIS inside an arrow function.
+    // Here THIS will always have proper value.
     onClickGood = (e: Event) => {
         this.info = e.toString();
     }

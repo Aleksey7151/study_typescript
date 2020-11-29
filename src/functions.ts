@@ -54,5 +54,14 @@ console.log(functionWithDefaultParameter("Alex"));
 
 console.log(functionWithRestParameters("GoGi", 55, "Safonau", "Batskavich", "Frodo", "Baggins"));
 
-var i = 0;
+type Great = (name: string) => string;
+type Log = (message: string, userId?: string) => void;
+type sumVariadicSafe = (...numbers: number[]) => number;
+
+let log: Log = (message, userId = "Not signed in") => {
+    let time = new Date().toISOString();
+    console.log(time, message, userId);
+}
+
+log("Frodo");
 
