@@ -121,7 +121,7 @@ class Employee extends Person {
 let emp = new Employee("Fred", "Economy");
 emp.display();
 emp.fullName = 'ter';
-emp.fullName = "Some quite long full name";
+emp.fullName = "Some quite";
 
 
 // Parameter properties
@@ -133,5 +133,30 @@ class Octopus {
 
 let oct = new Octopus("some string");
 let n = oct.name;
+
+// Static members 
+class Grid {
+    static origin = {x: 0, y: 0};
+
+    public constructor(public scale: number) {}
+
+    distanceFromOrigin(point: {x: number, y: number}) {
+        let deltaX = point.x - Grid.origin.x;
+        let deltaY = point.y - Grid.origin.y;
+
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY) / this.scale;
+    }
+}
+
+let grid1 = new Grid(1.0);
+let grid2 = new Grid(5.0);
+
+let dist1 = grid1.distanceFromOrigin({x: 10, y: 10});
+let dist2 = grid2.distanceFromOrigin({x: 10, y: 10});
+console.log(dist1);
+console.log(dist2);
+
+let point = Grid.origin;
+console.log(point);
 
 console.log("THe end!");
