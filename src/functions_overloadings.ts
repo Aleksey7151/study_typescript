@@ -20,3 +20,11 @@ let reserve: Reserve = (from, toOrDestination: Date | string) => {
 
     return result;
 }
+
+type CreateElement = {
+    (tag: string) : HTMLElement;
+}
+
+let createElement: CreateElement = (tag: string): HTMLElement => {
+    return new HTMLElement();
+}
