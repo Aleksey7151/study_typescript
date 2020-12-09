@@ -20,4 +20,14 @@ genericNumber.add = (a, b) => a + b;
 
 console.log(genericNumber.add(5, 9));
 
+{
+    class Animal {
+        numLegs: number;
+    }
+
+    class Bee extends Animal {
+        keeper:
+    }
+}
+
 console.log('The End!!!');
