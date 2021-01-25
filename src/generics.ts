@@ -48,6 +48,7 @@ genericNumber.zeroValue = 0;
 genericNumber.add = (a, b) => a + b;
 console.log(genericNumber.add(5, 9));
 
+<<<<<<< HEAD
 // filter tests
 console.log(filter([1,2,3,4,5], i => i < 4));
 console.log(filter(['a', 'b', 'c'], i => i != 'b'));
@@ -84,4 +85,45 @@ function fill(length: number, value: string) : string[] {
 
 call(fill, 10, 'a');
 
+=======
+{
+    class BeeKeeper {
+        hasMask: boolean;
+    }
+
+    class ZooKeeper {
+        nameTag: string;
+    }
+
+    class Animal {
+        numLegs: number;
+    }
+
+    class Bee extends Animal {
+        keeper: BeeKeeper;
+    }
+
+    class Lion extends Animal {
+        keeper: ZooKeeper;
+    }
+
+    function createInstance<A extends Animal>(c: new () => A) : A {
+        return new c();
+    }
+
+    function getMonth(date: any) : number | undefined {
+        if (date instanceof Date) {
+            return date.getMonth();
+        }
+
+        return undefined;
+    }
+
+    console.log(createInstance(Bee).keeper);
+    console.log(createInstance(Lion).keeper);
+    console.log(getMonth(5));
+    console.log(getMonth(new Date()));
+}
+
+>>>>>>> 30ba36ff3f7433f96daac0cd760a387b2bb22772
 console.log('The End!!!');

@@ -65,3 +65,12 @@ let log: Log = (message, userId = "Not signed in") => {
 
 log("Frodo");
 
+{
+    let great: Great = (name: string) => {
+        return `Greating you ${name}!!`;
+    }
+
+    console.log(great("Gandalf"));
+}
+
+console.log("The End!!");
